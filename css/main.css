@@ -13,8 +13,8 @@ body{
 	position:absolute;
 	background:#333;
 	overflow:hidden;
-	-webkit-perspective:800px;
-	-moz-perspective: 800px;
+	-webkit-perspective:1800px;
+	-moz-perspective: 1800px;
 }
 /*海报样式*/
 .photo{
@@ -26,8 +26,8 @@ body{
 	margin:-130px 0 0 -160px;
 	z-index:1;
 	box-shadow:0 0 1px rgba(0,0,0,.01);
-	-webkit-perspective:800px;
-	-moz-perspective: 800px;
+	-webkit-perspective:1800px;
+	-moz-perspective: 1800px;
 	-webkit-transition:all .5s;
 	-moz-transition:all .5s;
 }
