@@ -19,6 +19,7 @@ body {
     background: #333;
     overflow: hidden;
     perspective: 1800px;
+    -webkit-perspective: 1800px;
 }
 
 
@@ -32,7 +33,9 @@ body {
     margin: -160px 0 0 -120px;
     z-index: 1;
     perspective: 1800px;
+    -webkit-perspective: 1800px;
     transition: all .6s;
+    -webkit-transition: all .6s;
 }
 
 .photo .side {
@@ -63,15 +66,13 @@ body {
 
 .photo .side-back .desc {
     font-size: 14px;
-    line-height: 1.5em;
+    line-height: 1.5;
     color: #666;
     padding: 20px;
 }
 
 .photo-center {
-    top: 50%;
-    left: 50%;
-    margin: -160px 0 0 -120px;
+
 }
 
 
@@ -81,28 +82,31 @@ body {
     width: 100%;
     height: 100%;
     transition: transform .6s ease-in-out;
+    -webkit-transition: transform .6s ease-in-out;
     transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
     transform-origin: 0% 50%;
+    -webkit-transform-origin: 0% 50%;
 }
 
 .photo-wrap .side-front {
     transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
 }
 
 .photo-wrap .side-back {
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
 }
 
 .photo-wrap .side {
     backface-visibility: hidden;
-}
-
-.rotate-back {
-    z-index: 10;
+    -webkit-backface-visibility: hidden;
 }
 
 .rotate-back .photo-wrap {
     transform: translate(100%, 0) rotateY(-180deg);
+    -webkit-transform: translate(100%, 0) rotateY(-180deg);
 }
 
 .rotate-front .photo-wrap {
@@ -139,7 +143,9 @@ body {
     border-radius: 50%;
     text-align: center;
     transform: scale(.48);
+    -webkit-transform: scale(.48);
     transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
 }
 
 .nav span:after {
@@ -155,6 +161,7 @@ body {
 .nav .current {
     background: #888;
     transform: scale(1);
+    -webkit-transform: scale(1);
 }
 
 .nav .current:after {
@@ -164,4 +171,5 @@ body {
 .nav .curr-back {
     background: #555;
     transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
 }
