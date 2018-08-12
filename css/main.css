@@ -22,7 +22,6 @@ body {
     -webkit-perspective: 1800px;
 }
 
-
 /*海报样式*/
 .photo {
     width: 240px;
@@ -34,8 +33,22 @@ body {
     z-index: 1;
     perspective: 1800px;
     -webkit-perspective: 1800px;
-    transition: all .6s;
-    -webkit-transition: all .6s;
+    transition: transform .6s;
+    -webkit-transition: transform .6s;
+}
+
+.photo::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    visibility: visible;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.05);
+    -webkit-transition: opacity 0.6s;
+    transition: opacity 0.6s;
 }
 
 .photo .side {
@@ -62,18 +75,24 @@ body {
 .photo .side-front .caption {
     font-size: 16px;
     text-align: center;
+    color: #a7a0a2;
+    user-select: none;
 }
 
 .photo .side-back .desc {
     font-size: 14px;
     line-height: 1.5;
-    color: #666;
+    color: #a7a0a2;
     padding: 20px;
 }
 
-.photo-center {
-
+.photo-center::after {
+    -webkit-transition: opacity 0.6s, visibility 0s 0.6s;
+    transition: opacity 0.6s, visibility 0s 0.6s;
+    opacity: 0;
+    visibility: hidden;
 }
+
 
 
 /*负责翻转*/
@@ -109,11 +128,6 @@ body {
     -webkit-transform: translate(100%, 0) rotateY(-180deg);
 }
 
-.rotate-front .photo-wrap {
-    /*旋转问题需探索*/
-    /*-webkit-transform: ;
-    -moz-transform: ;*/
-}
 
 
 /*控制按钮样式*/
