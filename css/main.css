@@ -33,8 +33,8 @@ body {
     z-index: 1;
     perspective: 1800px;
     -webkit-perspective: 1800px;
-    transition: transform .6s;
-    -webkit-transition: transform .6s;
+    transition: transform .6s, opacity .6s;
+    -webkit-transition: transform .6s, opacity .6s;
 }
 
 .photo::after {
@@ -93,8 +93,6 @@ body {
     visibility: hidden;
 }
 
-
-
 /*负责翻转*/
 .photo-wrap {
     position: absolute;
@@ -128,8 +126,6 @@ body {
     -webkit-transform: translate(100%, 0) rotateY(-180deg);
 }
 
-
-
 /*控制按钮样式*/
 @font-face {
     font-family: "icons";
@@ -158,18 +154,29 @@ body {
     text-align: center;
     transform: scale(.48);
     -webkit-transform: scale(.48);
-    transition: all .5s ease-in-out;
-    -webkit-transition: all .5s ease-in-out;
+    transition: transform .5s ease-in-out;
+    -webkit-transition: transform .5s ease-in-out;
 }
 
-.nav span:after {
+.nav span::after {
     content: "\e600";
-    font-family: "icons";
     display: inline-block;
-    height: 30px;
+    vertical-align: top;
+    font-family: 'icons';
+    font-size: 80%;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
     line-height: 30px;
+    speak: none;
     color: #fff;
     opacity: 0;
+    -webkit-font-smoothing: antialiased;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .nav .current {
@@ -178,12 +185,18 @@ body {
     -webkit-transform: scale(1);
 }
 
-.nav .current:after {
+.nav .current::after {
     opacity: 1;
+    -webkit-transition-delay: 0.4s;
+    transition-delay: 0.4s;
 }
 
 .nav .curr-back {
     background: #555;
     transform: rotateY(-180deg);
     -webkit-transform: rotateY(-180deg);
+}
+
+.hide {
+    opacity: 0;
 }
