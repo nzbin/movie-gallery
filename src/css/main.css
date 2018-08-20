@@ -22,6 +22,14 @@ body {
     -webkit-perspective: 1800px;
 }
 
+.playground {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
 /*海报样式*/
 .photo {
     width: 240px;
@@ -136,12 +144,14 @@ body {
 
 .nav {
     position: absolute;
-    bottom: 20px;
-    width: 100%;
-    height: 30px;
-    line-height: 30px;
+    bottom: 0;
     z-index: 999;
+    width: 100%;
+    line-height: 30px;
     text-align: center;
+    white-space: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .nav span {
@@ -150,7 +160,6 @@ body {
     display: inline-block;
     cursor: pointer;
     background: #aaa;
-    border-radius: 50%;
     text-align: center;
     transform: scale(.48);
     -webkit-transform: scale(.48);
