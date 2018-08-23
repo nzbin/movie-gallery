@@ -116,6 +116,7 @@ body {
 
 .photo-inner .side {
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 .rotate-back .photo-inner {
@@ -170,6 +171,7 @@ body {
     -webkit-font-smoothing: antialiased;
     transition: opacity 0.3s;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 .nav .current {
